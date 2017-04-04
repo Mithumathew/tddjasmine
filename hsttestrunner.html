@@ -38,6 +38,42 @@
                     $scope.calculateTotal();
                     expect($scope.hst).toEqual(0.5);
                 });
+                it('sets the province to bc and calculates hst', function () {
+                    $scope.province = 'BC';
+                    $scope.amount = "10";
+                    $scope.calculateTotal();
+                    expect($scope.hst).toEqual(1.2);
+                });
+                it('sets the province to ns and calculates hst', function () {
+                    $scope.province = 'NS';
+                    $scope.amount = "10";
+                    $scope.calculateTotal();
+                    expect($scope.hst).toEqual(1.5);
+                });
+                it('sets the province to qc and calculates hst', function () {
+                    $scope.province = 'QC';
+                    $scope.amount = "10";
+                    $scope.calculateTotal();
+                    expect($scope.hst).toEqual(1.49);
+                });
+                it('sets the province to pei and calculates hst', function () {
+                    $scope.province = 'PEI';
+                    $scope.amount = "10";
+                    $scope.calculateTotal();
+                    expect($scope.hst).toEqual(1.5);
+                });
+                it('sets the province to nb and calculates hst', function () {
+                    $scope.province = 'NB';
+                    $scope.amount = "10";
+                    $scope.calculateTotal();
+                    expect($scope.hst).toEqual(1.5);
+                });
+                it('sets the province to yuk and calculates hst', function () {
+                    $scope.province = 'Yuk';
+                    $scope.amount = "10";
+                    $scope.calculateTotal();
+                    expect($scope.hst).toEqual(1.5);
+                });
             });
         });
         window.onload = function () {

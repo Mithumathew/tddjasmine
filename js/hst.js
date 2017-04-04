@@ -13,5 +13,24 @@ angular.module("myApp", []).controller("myCtrl", function ($scope) {
         }else if($scope.province == "AB"){
             $scope.hst = 0.05 * $scope.subtotal;
         }
+        else if($scope.province == "BC"){
+             $scope.hst = 0.12 * $scope.subtotal;
+        }
+         else if($scope.province == "NS"){
+             $scope.hst = 0.15 * $scope.subtotal;
+        }
+        else if($scope.province == "QC"){
+             $scope.hst = 0.149 * $scope.subtotal;
+        }
+        else if($scope.province == "PEI"){
+             $scope.hst = 0.15 * $scope.subtotal;
+        }
+        else if($scope.province == "NB"){
+             $scope.hst = 0.15 * $scope.subtotal;
+        }
+        else if($scope.province == "Yuk"){
+             $scope.hst = 0.15 * $scope.subtotal;
+        }
+        $scope.total = $scope.hst + $scope.subtotal
     }
 });
